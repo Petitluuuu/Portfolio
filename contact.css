@@ -1,0 +1,140 @@
+/* Corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 1.2em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-left a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.navbar-right .contact-box {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.navbar-right .contact-box:hover {
+    background-color: #0056b3;
+}
+
+
+/* Section Contact */
+.contact {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Card de contact */
+.contact-card {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+strong {
+    font-weight: bold;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Bouton pour télécharger le CV */
+.download-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Le footer prend la place de base et reste en bas */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Cette ligne fait que le footer reste en bas */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}

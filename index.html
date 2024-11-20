@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="carrouselcss.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><span>Antoine LUCAS</span></a>
+            </div>
+            <div class="navbar-right">
+                <a href="about.html">A propos de moi</a>
+                <a href="projets.html">Projets</a>
+                <a href="poursuite2.html">Poursuite d'études</a>
+                <a href="alternance.html">Mon alternance</a>
+                <a href="contact.html" class="contact-box">Contact</a>
+            </div>
+        </nav>
+    </header>
+  <header>
+    <h1>Mon Portfolio</h1>
+  </header>
+  
+  <main>
+    <div class="carousel">
+        <div class="carousel-images">
+          <div class="carousel-item">
+            <a href="about.html">
+              <img src="IMG_4942.jpg" alt="Image 1">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="projets.html">
+              <img src="vignetteideee62655.png" alt="Image 2">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="poursuite2.html">
+              <img src="poursuite.png.jpg" alt="Image 3">
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="alternance.html">
+              <img src="api-and-you.png" alt="Image 4">
+            </a>
+          </div>
+        </div>
+      </div>
+  </main>
+  
+  
+  
+  <script>const carouselImages = document.querySelector('.carousel-images');
+    const prevButton = document.querySelector('.carousel-btn.prev');
+    const nextButton = document.querySelector('.carousel-btn.next');
+    
+    let index = 0;
+    const totalImages = carouselImages.querySelectorAll('img').length;
+    
+    // Fonction pour mettre à jour la position du carrousel
+    function updateCarousel() {
+      const imageWidth = carouselImages.querySelector('img').clientWidth;
+      carouselImages.style.transform = `translateX(${-index * imageWidth}px)`;
+    }
+    
+    // Avance automatiquement le carrousel
+    function autoScroll() {
+      index = (index + 1) % totalImages; // Passe à l'image suivante
+      updateCarousel();
+    }
+    
+    // Démarrage du défilement automatique
+    let autoScrollInterval = setInterval(autoScroll, 3000); // Change toutes les 3 secondes
+    
+    // Gestion des boutons
+    nextButton.addEventListener('click', () => {
+      clearInterval(autoScrollInterval); // Arrête l'auto défilement
+      index = (index + 1) % totalImages;
+      updateCarousel();
+      autoScrollInterval = setInterval(autoScroll, 3000); // Redémarre l'auto défilement
+    });
+    
+    prevButton.addEventListener('click', () => {
+      clearInterval(autoScrollInterval); // Arrête l'auto défilement
+      index = (index - 1 + totalImages) % totalImages; // Wrap around
+      updateCarousel();
+      autoScrollInterval = setInterval(autoScroll, 3000); // Redémarre l'auto défilement
+    });
+    
+    // Ajuste la taille au redimensionnement de l'écran
+    window.addEventListener('resize', updateCarousel);
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 1.2em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-left a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.navbar-right .contact-box {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.navbar-right .contact-box:hover {
+    background-color: #0056b3;
+}
+
+/* Section Alternance */
+.alternance {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.alternance-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Entreprise */
+.entreprise {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.entreprise p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Logo de l'entreprise */
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Missions */
+.missions {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.missions p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Bénéfices */
+.benefices {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.benefices p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Le footer prend la place de base et reste en bas */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Cette ligne fait que le footer reste en bas */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}

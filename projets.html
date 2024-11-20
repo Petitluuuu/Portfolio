@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Antoine Lucas</title>
+    <link rel="stylesheet" href="projets.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><span>Antoine LUCAS</span></a>
+            </div>
+            <div class="navbar-right">
+                <a href="about.html">A propos de moi</a>
+                <a href="projets.html">Projets</a>
+                <a href="poursuite2.html">Poursuite d'études</a>
+                <a href="alternance.html">Mon alternance</a>
+                <a href="contact.html" class="contact-box">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="projects">
+        <!-- Section vidéo -->
+        <div class="video-frame">
+            <h2>Présentation d'un projet en vidéo</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="Video_SAE.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la balise vidéo.
+                </video>
+            </div>
+        </div>
+<!-- Section Projets -->
+<section id="projets" class="projets">
+    <h2>Exemple de projets</h2>
+    <div class="projets-container">
+        <div class="projet" onclick="openPopup('projet1')">
+            <img src="minecraft.jpg" alt="Projet 1">
+            <p>SAÉ304 Découvrir et mettre en place un réseau IoT</p>
+        </div>
+        <div class="projet" onclick="openPopup('projet2')">
+            <img src="image.png" alt="Projet 2">
+            <p>SAÉ301 Mettre en oeuvre un système de transmission</p>
+        </div>
+        <div class="projet" onclick="openPopup('projet3')">
+            <img src="rtchat.png" alt="Projet 3">
+            <p>SAÉ302 Développer des applications communicantes </p>
+        </div>
+    </div>
+</section>
+
+<!-- Pop-ups des projets -->
+<div id="projet1" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('projet1')">&times;</span>
+        <h3>SAÉ304 Découvrir et mettre en place un réseau IoT</h3>
+        <p>La SAÉ304 "Découvrir et mettre en place un réseau IoT" consistait à créer un système interactif où des boutons physiques, lorsqu'ils étaient pressés, déclenchaient des super pouvoirs dans le jeu Minecraft. Pour cela, nous avons utilisé Mosquitto, un serveur MQTT, qui a permis de faire transiter les données entre les boutons et le jeu. Chaque bouton était relié à Mosquitto, et lorsque l'on appuyait dessus, un signal était envoyé et activait un pouvoir spécifique dans Minecraft.
+
+            Ce projet m'a permis de me familiariser avec la technologie IoT et d'apprendre à utiliser Mosquitto pour faire communiquer des objets physiques avec un logiciel. D'un point de vue personnel, j'ai appris à être plus rigoureux et persévérant, car il a fallu résoudre plusieurs problèmes techniques pour faire fonctionner correctement l'ensemble du système. Sur le plan professionnel, j'ai développé mes compétences en programmation, en gestion de projets techniques, et en intégration de technologies IoT dans des applications concrètes.</p>
+    </div>
+</div>
+
+<div id="projet2" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('projet2')">&times;</span>
+        <h3>SAÉ301 Mettre en oeuvre un système de transmission</h3>
+        <p>Le projet SAÉ301 "Mettre en œuvre un système de transmission" avait pour objectif de créer notre propre serveur vidéo, où l’on pouvait ajuster la qualité de la vidéo en fonction de nos besoins. Pour cela, nous avons segmenté les fichiers vidéo à l’avance, une étape clé qui permettait de proposer plusieurs qualités pour une même vidéo. Nous avons aussi mis en place un VPN pour accéder à la page du serveur vidéo, qui était hébergé sur un serveur Nginx.
+
+            Ce projet m’a permis d'apprendre à gérer un serveur vidéo et à comprendre les techniques de segmentation vidéo, ce qui est essentiel pour offrir une expérience fluide et adaptable aux utilisateurs. Sur le plan personnel, il m’a appris à travailler de manière plus autonome et à résoudre des problèmes complexes liés à la gestion des serveurs et à la transmission de données. Professionnellement, ce projet a renforcé mes compétences en administration de serveurs, en optimisation des systèmes de diffusion vidéo.</p>
+    </div>
+</div>
+
+<div id="projet3" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('projet3')">&times;</span>
+        <h3>SAÉ302 Développer des applications communicantes </h3>
+        <p>Le projet SAÉ302 "Développer des applications communicantes" avait pour objectif de réaliser une application mobile de messagerie entre deux personnes. Nous avons commencé par concevoir des schémas pour définir le design de l’application, avant de coder plusieurs fonctionnalités permettant de répondre aux besoins des utilisateurs. L’application incluait un système de messagerie instantanée ainsi qu’un système de connexion et d’inscription permettant aux utilisateurs de créer et gérer leur compte.
+
+            Ce projet m’a permis d’acquérir des compétences pratiques en développement d’applications mobiles, en particulier dans la création d’interfaces utilisateur et dans la gestion de bases de données pour le système d’inscription et de connexion. Sur le plan personnel, j’ai appris à travailler en équipe, à organiser mes idées pour répondre aux exigences du client, et à résoudre des problèmes techniques liés à l’interface et aux fonctionnalités. Professionnellement, ce projet m’a permis de renforcer mes compétences en développement mobile, en programmation orientée objet, et en gestion de projet, ce qui m’a préparé à travailler sur des applications réelles avec des exigences spécifiques.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Antoine LUCAS | Tous droits réservés.</p>
+</footer>
+
+<script>// Ouvrir un pop-up
+    function openPopup(projetId) {
+        document.getElementById(projetId).style.display = 'flex';
+    }
+    
+    // Fermer un pop-up
+    function closePopup(projetId) {
+        document.getElementById(projetId).style.display = 'none';
+    }
+    </script>
+
+</body>
+</html>
